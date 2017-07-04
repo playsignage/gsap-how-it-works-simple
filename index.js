@@ -1,25 +1,40 @@
 import { Component } from 'preact'
-import { TimelineLite, SlowMo, Power2 } from 'gsap'
-// import {
-//   FontIcon,
-//   ImageIcon,
-//   TextIcon,
-//   VideoIcon,
-//   Document,
-//   Headline,
-//   Image,
-//   Laptop,
-//   LaptopContents,
-//   Video,
-//   Pipe,
-//   VerticalPipe,
-//   Screen,
-//   PortraitScreen
-// } from './svg'
-import { colors, defaults } from './config'
-import { qs } from './helpers'
+import {
+  TimelineLite
+  // SlowMo,
+  // Power2
+} from 'gsap'
+import {
+  FontIcon,
+  ImageIcon,
+  TextIcon,
+  VideoIcon,
+  Text,
+  Headline,
+  Image,
+  Laptop,
+  Video,
+  Pipe,
+  VerticalPipe,
+  Television
+} from './svg'
+
+import {
+  colors,
+  defaults
+} from './config'
+
+// import { qs } from './helpers'
 
 export default class App extends Component {
+  constructor () {
+    super();
+
+    this.state = {
+      mainColor: colors.denim
+    }
+  }
+
   componentDidMount () {
     // const iconGroupDOM = qs('#iconGroup')
 
@@ -28,13 +43,26 @@ export default class App extends Component {
     // timeline
     //   .from(textIconDOM, 0.5, { opacity: 0, rotation: -3, scale: 2, ease: Power2.easeIn })
 
-    timeline.timeScale(config.timeScale)
+    timeline.timeScale(defaults.timeScale)
   }
 
-  render () {
+  render (props, { mainColor }) {
     return (
       <main>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 340" />
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 340">
+          <FontIcon mainColor={mainColor} />
+          <ImageIcon mainColor={mainColor} />
+          <TextIcon mainColor={mainColor} />
+          <VideoIcon mainColor={mainColor} />
+          <Text mainColor={mainColor} />
+          <Headline />
+          <Image mainColor={mainColor} />
+          <Laptop />
+          <Video mainColor={mainColor} />
+          <Pipe />
+          <VerticalPipe />
+          <Television />
+        </svg>
       </main>
     )
   }

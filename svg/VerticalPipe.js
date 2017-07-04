@@ -1,15 +1,15 @@
-import variables from '../variables'
+import { colors } from '../config'
 
 const VerticalPipe = ({ customWidth = 2, customHeight = 100, ...props }) => {
   const movingVerticalPipeLength = 10
-  const ContainingRect = (props) => (<rect {...props} fill={variables.lightSkyBlue} x="0" y="0" width={customWidth} height={customHeight} />)
+  const ContainingRect = (props) => (<rect {...props} fill={colors.lightSkyBlue} x="0" y="0" width={customWidth} height={customHeight} />)
 
   return (
     <g {...props}>
       <ContainingRect />
 
       <g>
-        <rect fill={variables.denim} x="0" y="0" height={movingVerticalPipeLength} width={customWidth} />
+        <rect fill={colors.denim} x="0" y="0" height={movingVerticalPipeLength} width={customWidth} />
         <animateMotion dur="1s" repeatCount="indefinite">
           <mpath xlinkHref="#verticalpipeMotionPath" />
         </animateMotion>
