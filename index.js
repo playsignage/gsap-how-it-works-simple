@@ -33,6 +33,7 @@ export default class App extends Component {
 
   componentDidMount () {
     const laptopDOM = qs('#laptop')
+    const laptopContentDOM = qs('#laptopContent')
     const laptopAndContentDOM = qs('#laptopAndContent')
     const tvRightAndContentDOM = qs('#tvRightAndContent')
     const tvLeftAndContentDOM = qs('#tvLeftAndContent')
@@ -40,6 +41,7 @@ export default class App extends Component {
 
     timeline
       .to(laptopDOM, 0.5, { opacity: 1, ease: Power2.easeIn })
+      .to(laptopContentDOM, 0.2, { opacity: 1, ease: Power2.easeIn })
       .to(laptopAndContentDOM, 0.5, { scale: 0.6, transformOrigin: 'center center', delay: 3, ease: SlowMo.easeOut })
       .to(tvRightAndContentDOM, 0.5, { x: 550, ease: SlowMo.easeOut }, 'tvs')
       .to(tvLeftAndContentDOM, 0.5, { x: 10, ease: SlowMo.easeOut }, 'tvs')
@@ -55,7 +57,7 @@ export default class App extends Component {
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 340" width="100%">
           <g id="laptopAndContent">
             <Laptop id="laptop" opacity="0" transform="translate(268, 80)" mainColor={mainColor} />
-            <Content id="laptopContent" transform="translate(267, 79.5)" mainColor={mainColor} timeScale={timeScale} delay="1" />
+            <Content id="laptopContent" opacity="0" transform="translate(267, 79.5)" mainColor={mainColor} timeScale={timeScale} delay="1" />
           </g>
 
           <g id="tvRightAndContent" transform="translate(800, 10)">
