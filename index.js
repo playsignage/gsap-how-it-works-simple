@@ -52,7 +52,7 @@ export default class App extends Component {
   render (props, { mainColor, timeScale }) {
     return (
       <main>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 340">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 340" width="100%">
           <g id="laptopAndContent">
             <Laptop id="laptop" opacity="0" transform="translate(268, 80)" mainColor={mainColor} />
             <Content id="laptopContent" transform="translate(267, 79.5)" mainColor={mainColor} timeScale={timeScale} delay="1" />
