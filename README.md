@@ -1,11 +1,11 @@
-# Play Digital Signage: How to advanced animation
+# Play Digital Signage: How it works (simple gsap animation)
 
-## What's inside
+## 👀 What's inside
 - [x] gsap
 - [x] preact w/ hot reload
 - [x] awesome SVG animation
 
-## Getting started
+## 🏁 Getting started
 ```bash
 npm i
 npm run dev # develop

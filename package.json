@@ -1,7 +1,7 @@
 {
   "name": "how-to-simple",
   "version": "0.1.0",
-  "description": "",
+  "description": "Animation on how Play Digital Signage works",
   "main": "index.js",
   "scripts": {
     "test": "eslint . && preact test",
