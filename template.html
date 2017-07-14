@@ -6,7 +6,7 @@
 		<meta name="viewport" content="width=device-width,initial-scale=1">
 		<meta name="mobile-web-app-capable" content="yes">
 		<meta name="apple-mobile-web-app-capable" content="yes">
-		<link rel="manifest" href="/gsap-how-to-advanced/manifest.json">
+		<link rel="manifest" href="/gsap-how-it-works-simple/manifest.json">
 		<% if (htmlWebpackPlugin.options.manifest.theme_color) { %>
 			<meta name="theme-color" content="<%= htmlWebpackPlugin.options.manifest.theme_color %>">
 		<% } %>
@@ -14,9 +14,9 @@
 		 <% if (chunk.names.length === 1 && chunk.names[0] === 'polyfills') continue; %>
 			<% for (var file of chunk.files) { %>
 				<% if (htmlWebpackPlugin.options.preload && file.match(/\.(js|css)$/)) { %>
-					<link rel="preload" href="<%= htmlWebpackPlugin.files.publicPath + file %>" as="/gsap-how-to-advanced/<%= file.match(/\.css$/)?'style':'script' %>">
+					<link rel="preload" href="<%= htmlWebpackPlugin.files.publicPath + file %>" as="/gsap-how-it-works-simple/<%= file.match(/\.css$/)?'style':'script' %>">
 				<% } else if (file.match(/manifest\.json$/)) { %>
-					<link rel="manifest" href="/gsap-how-to-advanced/<%= htmlWebpackPlugin.files.publicPath + file %>">
+					<link rel="manifest" href="/gsap-how-it-works-simple/<%= htmlWebpackPlugin.files.publicPath + file %>">
 				<% } %>
 			<% } %>
 		<% } %>
@@ -40,9 +40,9 @@
 	</head>
 	<body>
 		<%= htmlWebpackPlugin.options.ssr({
-			url: '/gsap-how-to-advanced/'
+			url: '/gsap-how-it-works-simple/'
 		}) %>
-		<script defer src="/gsap-how-to-advanced<%= htmlWebpackPlugin.files.chunks['bundle'].entry %>"></script>
-		<script>window.fetch||document.write('<script src="/gsap-how-to-advanced<%= htmlWebpackPlugin.files.chunks["polyfills"].entry %>"><\/script>')</script>
+		<script defer src="/gsap-how-it-works-simple<%= htmlWebpackPlugin.files.chunks['bundle'].entry %>"></script>
+		<script>window.fetch||document.write('<script src="/gsap-how-it-works-simple<%= htmlWebpackPlugin.files.chunks["polyfills"].entry %>"><\/script>')</script>
 	</body>
 </html>
