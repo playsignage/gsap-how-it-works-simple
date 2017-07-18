@@ -1,7 +1,7 @@
 import color from 'color'
 
 const denim = color('#1565C0')
-const lightSkyBlue = denim.lighten(0.5)
+const lightSkyBlue = denim.lighten(1.1)
 
 export const colors = {
   lightSkyBlue: lightSkyBlue.rgb().string(),
