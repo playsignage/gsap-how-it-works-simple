@@ -1,6 +1,6 @@
 {
   "name": "how-to-simple",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Animation on how Play Digital Signage works",
   "main": "index.js",
   "scripts": {
