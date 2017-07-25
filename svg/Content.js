@@ -35,10 +35,10 @@ export default class Content extends Component {
     const timeline = new TimelineLite()
 
     timeline
-      .to(headlineDOM, 0.5, { opacity: 1, y: 35, ease: SlowMo.easeIn })
+      .to(headlineDOM, 0.5, { opacity: 1, y: 40, ease: SlowMo.easeIn })
       .to(imageDOM, 0.5, { opacity: 1, y: 55, ease: SlowMo.easeIn })
-      .to(textDOM, 0.5, { opacity: 1, y: 56, ease: SlowMo.easeIn })
-      .to(videoDOM, 0.5, { opacity: 1, x: 157.5, ease: SlowMo.easeIn })
+      .to(textDOM, 0.5, { opacity: 1, y: 57, ease: SlowMo.easeIn })
+      .to(videoDOM, 0.5, { opacity: 1, x: 155.5, ease: SlowMo.easeIn })
 
     timeline
       .delay(parseInt(delay, 0) || 0)
@@ -49,18 +49,18 @@ export default class Content extends Component {
     const backgroundColor = color(mainColor).lighten(1.2).rgb().string()
 
     return (
-      <g {...props} >
+      <g {...props}>
         <path fill="white" d="M39.363 6.217h182.31v123.1H39.364z" />
-        <Headline id={`headline-${internalId}`} opacity="0" transform="scale(1.5), translate(35, 20)" mainColor={mainColor} />
+        <Headline id={`headline-${internalId}`} opacity="0" transform="matrix(1.5,0,0,1.5,50,20)" mainColor={mainColor} />
 
-        <g id={`image-${internalId}`} opacity="0" transform="scale(1.4), translate(38, 60)">
+        <g id={`image-${internalId}`} opacity="0" transform="matrix(1.4,0,0,1.4,50,75)">
           <rect x="0" y="1" width="38" height="30" fill={backgroundColor} />
-          <Image transform="scale(1.4), translate(3.5, 6)" id={`image-${internalId}`} mainColor={mainColor} />
+          <Image transform="scale(1.4), translate(3.5, 6)" mainColor={mainColor} />
         </g>
 
-        <Text id={`text-${internalId}`} opacity="0" mainColor={mainColor} transform="scale(1.5), translate(72.5, 59)" />
+        <Text id={`text-${internalId}`} opacity="0" mainColor={mainColor} transform="matrix(1.5,0,0,1.5,107,77)" />
 
-        <g id={`video-${internalId}`} opacity="0" transform="scale(2.9), translate(50, 1.4)"> {/* should be 0 */}
+        <g id={`video-${internalId}`} opacity="1" transform="matrix(3,0,0,2.92,150,3.5)"> {/* should be 0 */}
           <rect x="0" y="1" width="22" height="42" fill={backgroundColor} />
           <Video transform="scale(0.8), translate(2, 5)" mainColor={mainColor} />
         </g>
