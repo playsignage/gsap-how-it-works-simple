@@ -55,12 +55,12 @@ export default class Content extends Component {
 
         <g id={`image-${internalId}`} opacity="0" transform="matrix(1.4,0,0,1.4,50,75)">
           <rect x="0" y="1" width="38" height="30" fill={backgroundColor} />
-          <Image transform="scale(1.4), translate(3.5, 6)" mainColor={mainColor} />
+          <Image transform="scale(1.35, 1.4), translate(4, 6)" mainColor={mainColor} />
         </g>
 
         <Text id={`text-${internalId}`} opacity="0" mainColor={mainColor} transform="matrix(1.5,0,0,1.5,107,77)" />
 
-        <g id={`video-${internalId}`} opacity="1" transform="matrix(3,0,0,2.92,150,3.5)"> {/* should be 0 */}
+        <g id={`video-${internalId}`} opacity="0" transform="matrix(3,0,0,2.92,150,3.5)"> {/* should be 0 */}
           <rect x="0" y="1" width="22" height="42" fill={backgroundColor} />
           <Video transform="scale(0.8), translate(2, 5)" mainColor={mainColor} />
         </g>
