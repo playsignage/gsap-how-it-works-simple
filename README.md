@@ -13,7 +13,8 @@ npm run build # publish
 ```
 
 ## ⚠️ Requirements
-Node v8
+- Node v8
+- Should work fine in all browsers
 
 
 ## Made with ❤️ by Play Digital Signage.
